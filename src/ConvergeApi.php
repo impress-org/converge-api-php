@@ -330,4 +330,81 @@ class ConvergeApi
         $parameters['ssl_transaction_type'] = 'ccauthonly';
         return $this->sendRequest('ccauthonly', $parameters);
     }
+        /**
+     * Submit Credit Card Return request (refund).
+     *
+     * @param array $parameters Input parameters
+     * @return array Response from Converge
+     **/
+    public function ccreturn(array $parameters = array())
+    {
+        $parameters['ssl_transaction_type'] = 'ccreturn';
+        return $this->sendRequest('ccreturn', $parameters);
+    }
+    /**
+     * Submit Credit Card Void request (void).
+     *
+     * @param array $parameters Input parameters
+     * @return array Response from Converge
+     **/
+    public function ccvoid(array $parameters = array())
+    {
+        $parameters['ssl_transaction_type'] = 'ccvoid';
+        return $this->sendRequest('ccvoid', $parameters);
+    }
+    /**
+     * Submit Electronic Check Purchase request.
+     *
+     * @param array $parameters Input parameters
+     * @return array Response from Converge
+     **/
+    public function ecspurchase(array $parameters = array())
+    {
+        $parameters['ssl_transaction_type'] = 'ecspurchase';
+        return $this->sendRequest('ecspurchase', $parameters);
+    }
+    /**
+     * Submit Electronic Check Purchase request.
+     *
+     * @param array $parameters Input parameters
+     * @return array Response from Converge
+     **/
+    public function ecsaddrecurring(array $parameters = array())
+    {
+        $parameters['ssl_transaction_type'] = 'ecsaddrecurring';
+        return $this->sendRequest('ecsaddrecurring', $parameters);
+    }
+    /**
+     * Submit "ecsrecurringsale" request
+     *
+     * @param array $parameters Input parameters
+     * @return array Response from Converge
+     **/
+    public function ecsrecurringsale(array $parameters = array())
+    {
+        $parameters['ssl_transaction_type'] = 'ecsrecurringsale';
+        return $this->sendRequest('ecsrecurringsale', $parameters);
+    }
+    /**
+     * Submit "ecsaddinstall" request
+     *
+     * @param array $parameters Input parameters
+     * @return array Response from Converge
+     **/
+    public function ecsaddinstall(array $parameters = array())
+    {
+        $parameters['ssl_transaction_type'] = 'ecsaddinstall';
+        return $this->sendRequest('ecsaddinstall', $parameters);
+    }
+    /**
+     * Submit "ecsinstallsale" request
+     *
+     * @param array $parameters Input parameters
+     * @return array Response from Converge
+     **/
+    public function ecsinstallsale(array $parameters = array())
+    {
+        $parameters['ssl_transaction_type'] = 'ecsinstallsale';
+        return $this->sendRequest('ecsinstallsale', $parameters);
+    }
 }
